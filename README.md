@@ -75,17 +75,6 @@ analise-acoes/
 └── .gitignore        # Exclusões de arquivos locais do Git
 ```
 
-## Correção realizada
-
-Na criação do DataFrame `resumo`, a coluna de retorno anualizado referenciava `retorno_anual`, uma variável não definida. Isso causava um `NameError` e interrompia a execução antes da geração do gráfico.
-
-```diff
--    'Retorno anualizado (%)': retorno_anual,
-+    'Retorno anualizado (%)': retorno_anualizado,
-```
-
-A referência passou a utilizar a variável já calculada no próprio script. Os cálculos, as impressões repetidas e a estrutura original foram preservados. A preparação para o GitHub acrescentou somente esta documentação, a lista de dependências e as exclusões do Git.
-
 ## Premissas e limites
 
 - Cada ação é analisada individualmente. Apesar do nome `Carteira` no código, não há pesos, rebalanceamento ou cálculo de desempenho de uma carteira conjunta.
